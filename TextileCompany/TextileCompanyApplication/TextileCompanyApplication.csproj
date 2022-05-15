@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39064108-B363-4EAD-AB7C-301188456B70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TextileCompanyApplication</RootNamespace>
+    <AssemblyName>TextileCompanyApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\Images\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\DelegateCommand.cs" />
+    <Compile Include="Core\LogginedUser.cs" />
+    <Compile Include="Core\SelectedProduct.cs" />
+    <Compile Include="Model\Entities\City.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\EntityContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\EntityContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\EntityContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Manufacturer.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Order.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\OrderHasProduct.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\OrderPickupPoint.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\OrderStatus.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Product.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\ProductCategory.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Provider.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Role.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\Street.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\UnitOfMeasurement.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Entities\User.cs">
+      <DependentUpon>EntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Enums\Role.cs" />
+    <Compile Include="Model\ProductModel.cs" />
+    <Compile Include="ViewModel\AdminViewModel.cs" />
+    <Compile Include="ViewModel\AuthorizationViewModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\ClientViewModel.cs" />
+    <Compile Include="ViewModel\ManagerViewModel.cs" />
+    <Compile Include="ViewModel\AdminProductViewModel.cs" />
+    <Compile Include="ViewModel\VisitorViewModel.cs" />
+    <Compile Include="View\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuthorizationWindow.xaml.cs">
+      <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ClientWindow.xaml.cs">
+      <DependentUpon>ClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManagerWindow.xaml.cs">
+      <DependentUpon>ManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminProductWindow.xaml.cs">
+      <DependentUpon>AdminProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisitorWindow.xaml.cs">
+      <DependentUpon>VisitorWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\Entities\EntityContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\Entities\EntityContext.edmx.diagram">
+      <DependentUpon>EntityContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Assets\ResourceDictionaries\ColorDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\ResourceDictionaries\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VisitorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\Images\icon.ico" />
+    <Resource Include="Assets\Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\B111C5.jpeg" />
+    <Resource Include="Assets\Images\E112C6.jpg" />
+    <Resource Include="Assets\Images\K839K3.jpg" />
+    <Resource Include="Assets\Images\L293S9.jpg" />
+    <Resource Include="Assets\Images\M112C8.jpg" />
+    <Resource Include="Assets\Images\M294G9.jpg" />
+    <Resource Include="Assets\Images\M398S9.jpg" />
+    <Resource Include="Assets\Images\N283K3.jpg" />
+    <Resource Include="Assets\Images\S384K2.jpg" />
+    <Resource Include="Assets\Images\T238C7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Entities\EntityContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityContext.Context.cs</LastGenOutput>
+      <DependentUpon>EntityContext.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\Entities\EntityContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityContext.edmx</DependentUpon>
+      <LastGenOutput>EntityContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

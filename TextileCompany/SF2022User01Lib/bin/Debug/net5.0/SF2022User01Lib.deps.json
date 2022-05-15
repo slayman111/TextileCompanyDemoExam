@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SF2022User01Lib/1.0.0": {
+        "runtime": {
+          "SF2022User01Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SF2022User01Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

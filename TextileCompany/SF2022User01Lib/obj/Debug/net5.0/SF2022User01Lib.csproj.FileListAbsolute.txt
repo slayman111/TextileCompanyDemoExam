@@ -1,0 +1,12 @@
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\bin\Debug\net5.0\SF2022User01Lib.deps.json
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\bin\Debug\net5.0\SF2022User01Lib.dll
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\bin\Debug\net5.0\SF2022User01Lib.pdb
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.csproj.AssemblyReference.cache
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.AssemblyInfoInputs.cache
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.AssemblyInfo.cs
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.csproj.CoreCompileInputs.cache
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.dll
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\refint\SF2022User01Lib.dll
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\SF2022User01Lib.pdb
+D:\Projects\College\3 course\Демо экзамен\WorkFolder\TextileCompany\SF2022User01Lib\obj\Debug\net5.0\ref\SF2022User01Lib.dll

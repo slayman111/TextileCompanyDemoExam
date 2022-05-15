@@ -1,0 +1,63 @@
+﻿<Window x:Class="TextileCompanyApplication.View.ProductAddingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextileCompanyApplication.View"
+        xmlns:viewmodel="clr-namespace:TextileCompanyApplication.ViewModel"
+        mc:Ignorable="d"
+        Title="Добавление товара" Height="950" Width="700" MinHeight="550" MinWidth="700" WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <viewmodel:AdminProductViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Image Margin="15,0,0,0" Source="/Assets/Images/logo.png" />
+            <TextBlock Text="ООО «Ткани»" VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Номер" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding Article}" IsReadOnly="{Binding IsArticleReadOnly}" Style="{StaticResource TextBoxStyle}" />
+            <TextBlock Text="Название" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding Name}" Style="{StaticResource TextBoxStyle}" />
+            <TextBlock Text="Единица измерения" Style="{StaticResource TextBlockStyle}" />
+            <ComboBox ItemsSource="{Binding UnitOfMeasurements}" SelectedItem="{Binding SelectedUnitOfMeasurement}" DisplayMemberPath="Value"
+                      Style="{StaticResource ComboBoxStyle}" />
+            <TextBlock Text="Стоимость" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding Price}" Style="{StaticResource TextBoxStyle}" />
+            <TextBlock Text="Максимальная скидка" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding MaxDiscount}" Style="{StaticResource TextBoxStyle}" />
+            <TextBlock Text="Текущая скидка" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding CurrentDiscount}" Style="{StaticResource TextBoxStyle}" />
+            <TextBlock Text="Производитель" Style="{StaticResource TextBlockStyle}" />
+            <ComboBox ItemsSource="{Binding Manufacturers}" SelectedItem="{Binding SelectedManufacturer}" DisplayMemberPath="Value"
+                      Style="{StaticResource ComboBoxStyle}" />
+            <TextBlock Text="Поставщик" Style="{StaticResource TextBlockStyle}" />
+            <ComboBox ItemsSource="{Binding Providers}" SelectedItem="{Binding SelectedProvider}" DisplayMemberPath="Value"
+                      Style="{StaticResource ComboBoxStyle}" />
+            <TextBlock Text="Категория" Style="{StaticResource TextBlockStyle}" />
+            <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" DisplayMemberPath="Value"
+                      Style="{StaticResource ComboBoxStyle}" />
+            <TextBlock Text="Кол-во" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding Amount}" Style="{StaticResource TextBoxStyle}" />
+            <TextBlock Text="Информация" Style="{StaticResource TextBlockStyle}" />
+            <TextBox Text="{Binding Info}" Style="{StaticResource TextBoxStyle}" Height="60" TextWrapping="Wrap" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Button Content="Назад" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Width="120"
+                Command="{Binding BackCommand}" />
+            <Button Content="{Binding Action}" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" Width="120"
+                Command="{Binding AddOrUpdateProductCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>
